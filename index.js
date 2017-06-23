@@ -21,6 +21,16 @@ app.post('/', rawParser, function (req, res) {
     var args = ['-f','docx','-t','markdown', tmpPath]
     var pandoc = spawn('pandoc', args)
     pandoc.stdout.pipe(res)
+
+    pandoc.on('close', (code) => {
+      console.log(`pandoc exit code: ${code}`)
+      console.log(`Deleting temp file '${tmpPath}'.`)
+      fs.unlink(tmpPath, (err) => {
+        if(!err) {
+          console.log(`Deleted '${tmpPath}'`)
+        }
+      })
+    })
   })
 })
 
