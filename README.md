@@ -13,7 +13,7 @@ node index.js
 
 Server should now be running on localhost:3000
 
-## Usage
+## Example Usage
 
 If `inputfile.docx` is a file in current directory, then do:
 
