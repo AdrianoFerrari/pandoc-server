@@ -1,12 +1,12 @@
 {
-  "name": "test-pandoc",
-  "version": "1.0.0",
-  "description": "",
+  "name": "pandoc-server",
+  "version": "0.0.4",
+  "description": "Take binary docx from POST, return Markdown.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Adriano Ferrari",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
